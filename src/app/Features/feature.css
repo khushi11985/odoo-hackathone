@@ -67,8 +67,3 @@
     padding: 1.2rem;
   }
 }
-@media (max-width: 480px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-}

@@ -22,7 +22,7 @@ export default function Home() {
             on time.
           </p>
           <div className="hero-buttons">
-            <Link href="/signup"><button className="btn-primary">Start Free Trial →</button></Link>
+            <Link href="/signin"><button className="btn-primary">Start Free Trial →</button></Link>
             <Link href="/signin"><button className="btn-secondary">Sign In</button></Link>
           </div>
         </div>

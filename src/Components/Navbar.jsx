@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import './navbar.css';
 
-
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -14,22 +20,27 @@ export default function Navbar() {
         </Link>
       </div>
 
+      {/* Hamburger Menu */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+        <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+        <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+      </div>
+
       {/* Navigation Links */}
-      <ul className="nav-links">
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
         <li>
-          <Link href="/projects">Projects</Link>
+          <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
         </li>
         <li>
-          <Link href="/Features">Features</Link>
+          <Link href="/features" onClick={() => setIsOpen(false)}>Features</Link>
         </li>
         <li>
-          <Link href="/Dashboard">Dashboard</Link>
+          <Link href="/Dashboard" onClick={() => setIsOpen(false)}>Dashboard</Link>
         </li>
+        
         <li>
-          <Link href="/pricing">Pricing</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
+          <Link href="/About" onClick={() => setIsOpen(false)}>About</Link>
         </li>
       </ul>
 
