@@ -1,0 +1,182 @@
+
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  font-family: Arial, sans-serif;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+ color: black;
+}
+
+.bold-text {
+  color: black;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+/* Right side card */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 480px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  padding: 10px;
+  background: #f1f1f1;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.task-column {
+  flex: 1;
+  margin: 0 8px;
+}
+
+.task-column h4 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.task-box {
+  width: 100%;
+  height: 30px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 40px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
